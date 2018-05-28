@@ -42,8 +42,8 @@ def create_sql(item_name):
     c = sqlite3.connect("database.db")
     #dateの取得
     date = entry_hiduke.get()
-    #item_nameの取得
-    item_name = combo.get()
+    #item_nameの取得 関数のはじめに引数で(itemname）を指定しているため必要なし　※登録ボタンのcommand=lambda:create_sql(combo.get()))
+    #item_name = combo.get()
     #金額の取得
     amount = entry_amount.get()
     #備考欄の取得
