@@ -14,9 +14,7 @@ header = next(reader)
 for row in reader:
     data.append(row)
 
-print(row[2])
 
-print(row)
 
 
 
