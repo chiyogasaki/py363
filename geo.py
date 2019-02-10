@@ -6,16 +6,8 @@ from urllib.parse import quote
 import urllib.request, urllib.error
 import csv
 
-data = []
-f = open("test.csv", "r")
-reader = csv.reader(f)
-header = next(reader)
-
-for row in reader:
-    data.append(row)
-
-
-
+with open("test.csv") as f:
+    lst = list(csv.reader(f))
 
 
 def adr2geo(adr):
@@ -26,14 +18,10 @@ def adr2geo(adr):
     lng = xml.find('coordinate/lng').text
     return (float(lat), float(lng))
 
-print(adr2geo("北九州市若松区鴨生田4−９−２"))
-	
-def main():
-    print(adr2geo('北九州市八幡西区千代ケ崎2-6-7-408'))
 
-if __name__ == '__main__':
-    main()
+lst2 = lst[1][3]
 
+print(adr2geo(lst2))
 
 
 
