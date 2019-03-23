@@ -45,7 +45,7 @@ def dist_on_sphere(pos0, pos1, radious=earth_rad):
     return acos(sum(x * y for x, y in zip(xyz0, xyz1)))*radious
 
 
-startpoint_name = "福岡県遠賀郡水巻町下ニ西3-6-15"
+startpoint_name = ""
 startpoint = adr2geo(startpoint_name)
 
 alldata = []
