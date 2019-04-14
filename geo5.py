@@ -63,7 +63,7 @@ else: #data.csvの作成
 
 
 
-    startpoint_name = "福岡県遠賀郡水巻町下ニ西3-6-15"
+    startpoint_name = "起点の住所"
     startpoint = adr2geo(startpoint_name)
 
     alldata = []
@@ -104,15 +104,15 @@ for x in bus_stop:
 
 
 
-#Aバスのバス停を並べる
+#Aを並べる
 print("★===================================================")
-print("Aバスのバス停候補:",abus)
+print("Aの候補:",abus)
 print("=========================")
 abus_stop = abus
 abus_stop = np.array(abus_stop)
 
 
-abus_stop2 = [[abus[0]]] #abus_stop2に１番目のバス停を含める（幼稚園から最短の場所）
+abus_stop2 = [[abus[0]]] 
 while 1 < len(abus_stop):
     #print(len(abus_stop))
     abus_stop = np.delete(abus_stop, 5, axis = 1)
@@ -134,12 +134,12 @@ else:
         #print(x)
         abus_route.append(x[0])
     abus_route = np.array(abus_route)
-#    print("Aバスのバス停並び：",abus_route)
+#    print("Aの並び：",abus_route)
 #    print("=====================")
     print("=========================")
-    print("Aバスの並び===============")
+    print("Aの並び===============")
     print("=========================")
-    print("===住所のみ表示"+"0"+"番:","幼稚園")
+    print("===住所のみ表示"+"0"+"番:","起点")
     a = 1
     for x in abus_route:
         print("↓")
@@ -147,14 +147,14 @@ else:
         a += 1
 
 
-#Bバスのバス停を並べる
+#Bを並べる
 print("★===================================================")
-print("Bバスのバス停候補:",bbus)
+print("Bの候補:",bbus)
 bbus_stop = bbus
 bbus_stop = np.array(bbus_stop)
 
 
-bbus_stop2 = [[bbus[0]]] #abus_stop2に１番目のバス停を含める（幼稚園から最短の場所）
+bbus_stop2 = [[bbus[0]]] 
 while 1 < len(bbus_stop):
     #print(len(abus_stop))
     bbus_stop = np.delete(bbus_stop, 5, axis = 1)
@@ -176,12 +176,12 @@ else:
         #print(x)
         bbus_route.append(x[0])
     bbus_route = np.array(bbus_route)
-#    print("Aバスのバス停並び：",abus_route)
+#    print("Aの並び：",abus_route)
 #    print("=====================")
     print("=========================")
-    print("Bバスの並び===============")
+    print("Bの並び===============")
     print("=========================")
-    print("===住所のみ表示"+"0"+"番:","幼稚園")
+    print("===住所のみ表示"+"0"+"番:","起点")
     a = 1
     for x in bbus_route:
         print("↓")
