@@ -63,7 +63,7 @@ else: #data.csvの作成
 
 
 
-    startpoint_name = "福岡県遠賀郡水巻町下ニ西3-6-15"
+    startpoint_name = "起点"
     startpoint = adr2geo(startpoint_name)
 
     alldata = []
